@@ -2,7 +2,7 @@ package nes
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 )
 
 type Ines interface {
@@ -13,9 +13,9 @@ type Ines interface {
 
 const HeaderSize = 0x0010
 
-func NewCassette(path string) (Ines, error){
-	bytes, err := ioutil.ReadFile(path)
-	if err != nil{
+func NewCassette(path string) (Ines, error) {
+	bytes, err := os.ReadFile(path)
+	if err != nil {
 		return nil, fmt.Errorf("cannot open %s", path)
 	}
 
