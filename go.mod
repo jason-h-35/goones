@@ -1,6 +1,6 @@
 module go_nes
 
-go 1.12
+go 1.21
 
 require (
 	github.com/ad-sho-loko/goones v0.0.0-20190817094426-e9d6438c9a16
